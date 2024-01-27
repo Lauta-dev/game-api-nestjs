@@ -1,7 +1,4 @@
-const basePath =
-	import.meta.env.NODE_ENV === "production"
-		? "https://game-api-nestjs.vercel.app"
-		: "http://localhost:3000";
+const basePath = "https://game-api-nestjs.vercel.app";
 
 export const paths = {
 	getAllGames: basePath,
