@@ -52,7 +52,7 @@ turso db tokens create games.
 turso db show games --url
 ```
 
-> Tanto el **token** como la **url** tienen que ir en un archivo **.env**. [Este es el ejemplo](./env.example).
+> Tanto el **token** como la **url** tienen que ir en un archivo **.env**. [Este es el ejemplo](./backend/env.example).
 
 ### Insertar los datos
 
@@ -60,39 +60,49 @@ turso db show games --url
 ```bash
 turso db shell games
 ```
-En el repo tiene el [La definición de la base de datos](./createTable.sql) y las [sentencias SQL para añadir las columnas](./insertGames.sql).
+2. En el repo tiene el [La definición de la base de datos](./backend/createTable.sql) y las [sentencias SQL para añadir las columnas](./backend/insertGames.sql).
 Solo se tendra que copiar y pegar.
 
 ## Iniciarlo en local
 
-1. Clonar el repositorio
+#### Clonar el repositorio
 
 ```bash
 git clone https://github.com/Lauta-dev/render-nestjs.git
 ```
 
-2. Instalar dependencias
+1.1. Instalar dependencias de la API
 
-- En este proyecto lo hice con [pnpm](https://github.com/pnpm/pnpm), pero podes usar **npm**
+```bash
+cd ./backend
+```
 
 ```bash
 pnpm install
 ```
 
-3. Levantar API
+1.2. Levantar API
 
 ```bash
 pnpm run start:dev
 ```
 
-4. Levantar front-end
+2.1. Instalar dependencias del Frontend
+
 
 ```bash
-cd demo
-pnpm run dev
+cd ./demo/
 ```
 
+```bash
+pnpm install
+```
 
+1.2. Levantar el Frontend
+
+```bash
+pnpm run dev
+```
 
 ## Rutas de la API
 
