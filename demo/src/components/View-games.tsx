@@ -3,13 +3,14 @@ import { ViewAllGames } from "@/interface/Game";
 import ConsoleSelect from "./Console-select";
 
 function ViewGames({ games }: { games: ViewAllGames[] | undefined }) {
+	console.log(games);
 	return (
 		<section className={"grid grid-cols-3 gap-5"}>
 			{games?.map((data) => (
 				<div key={data.id} className={"flex flex-col justify-between"}>
 					<img
 						className={"rounded-xl object-fill"}
-						src={data.covers.webp}
+						src={data.covers.jpg}
 						alt={data.title}
 					/>
 
