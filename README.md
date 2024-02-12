@@ -13,6 +13,10 @@ Esta base de datos cuenta con **35** registros con su:
 7. Precio
 8. Generación que pertenece el juego
 
+[Ver demo](https://game-api-nestjs-9zti.vercel.app/)
+[Probar API](https://game-api-nestjs.vercel.app/)
+
+
 ## Tecnologías Utilizadas
 
 - [NestJS](https://github.com/nestjs/nest): Framework de backend que facilita el desarrollo de aplicaciones escalables y modularizadas en Node.js.
@@ -20,7 +24,6 @@ Esta base de datos cuenta con **35** registros con su:
 - [Preact](https://github.com/preactjs/preact): Una alternativa a **React** con una API similar.
 - [Hosting Vercel](https://vercel.com): Hosting dónde esta alojada la demo
 - [Hosting Render](https://render.com): Hosting dónde esta alojada la API
-
 
 ## Requirementos
 - Instalar [Turso](https://turso.tech/)
