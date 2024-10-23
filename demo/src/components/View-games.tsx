@@ -8,11 +8,13 @@ function ViewGames({ games }: { games: ViewAllGames[] | undefined }) {
 		<section className={"grid grid-cols-3 gap-5"}>
 			{games?.map((data) => (
 				<div key={data.id} className={"flex flex-col justify-between"}>
-					<img
-						className={"rounded-xl object-fill"}
-						src={data.covers.jpg}
-						alt={data.title}
-					/>
+					<Link href={`/game/${data.id}`} target={"_blank"}>
+						<img
+							className={"rounded-xl object-fill"}
+							src={data.covers.webp}
+							alt={data.title}
+						/>
+					</Link>
 
 					<div>
 						<p className={"text-green-700"}>
@@ -23,6 +25,7 @@ function ViewGames({ games }: { games: ViewAllGames[] | undefined }) {
 							className={`
 						flex justify-between gap-3
 						max-md:flex max-md:flex-col
+            items-center
 						`}
 						>
 							<Link

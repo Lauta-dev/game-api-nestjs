@@ -5,8 +5,8 @@ import { paths } from "@/paths";
 import { links } from "@/metadata";
 
 export interface ConsoleName {
-	consoleSmallName: string;
-	consolePublicName: string;
+	short: string;
+	public: string;
 }
 
 export interface GenerationGames {
@@ -25,10 +25,6 @@ function Form({
 
 	// Esta función se ejecuta cada vez que algunos de los dos select cambie.
 	const handleValueChange = (value: string) => {
-		if (value === "elegir") {
-			return;
-		}
-
 		const selected = type?.toLowerCase();
 		const url = `/item/${selected}/${value}`;
 		setLocation(url); // Actualiza la URL
@@ -38,14 +34,16 @@ function Form({
 	return (
 		<>
 			<select
-				value={"asd"}
 				onChange={(v) => {
 					handleValueChange((v.target as HTMLSelectElement).value);
 				}}
 			>
+				<option selected disabled>
+					{type == "Console" ? "Consolas" : "Generaciones"}
+				</option>
 				{consoleSmallName?.map((data) => (
-					<option key={data.consolePublicName} value={data.consoleSmallName}>
-						{data.consolePublicName}
+					<option key={data.public} value={data.short}>
+						{data.public}
 					</option>
 				))}
 
